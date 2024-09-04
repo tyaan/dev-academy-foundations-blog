@@ -1,0 +1,97 @@
+body {
+  font-family: Monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#main-container {
+  width: 70%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#intro {
+  text-align: center;
+}
+
+#intro h1 {
+  padding: 30px;
+}
+
+#intro p {
+  color: rgb(67, 67, 67);
+  padding: 30px;
+}
+
+article {
+  text-align: center;
+}
+
+article h2 {
+  padding: 30px;
+}
+
+article h3 {
+  padding: 30px;
+}
+
+article p {
+  color: rgb(67, 67, 67);
+  background-color: white;
+  padding: 20px;
+}
+
+.example-containers {
+  border: 2px black;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.example-containers p {
+  border: 2px solid black;
+  flex: 1 1 auto;
+  position: relative;
+  min-height: 15px;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(244, 244, 244, 0.5);
+  border: 1px solid #ddd;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.code-block {
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(244, 244, 244, 0.5);
+  border: 1px solid #ddd;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.navbar a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  flex: 1 1 auto;
+  min-width: 100px;
+}
+
+.navbar a:hover {
+  background-color: #c5c3c3;
+}

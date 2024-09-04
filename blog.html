@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <title>Tyaan Singh</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Tech Blog</a>
+      </div>
+
+      <article>
+        <h2>
+          CSS Positionings:
+          <span style="color: rgb(187, 54, 54)">Relative</span> vs
+          <span style="color: rgb(76, 132, 205)">Absolute</span> vs
+          <span style="color: rgb(199, 188, 89)">Fixed</span>
+        </h2>
+
+        <p>CSS is a programming language that is used to style web pages.</p>
+
+        <p>
+          For example, the <span style="color: red">color</span>,
+          <span style="position: relative; top: 5px">position</span> and
+          <span style="font-family: fantasy">font</span> of text can be altered
+          using CSS.
+        </p>
+
+        <p>
+          In this article we will discuss the CSS
+          <code>position</code> property, and how it is used to alter the
+          alignmet of elements on a page.
+        </p>
+
+        <h3 style="color: rgb(187, 54, 54)">Relative Position</h3>
+
+        <p>
+          When we set the <code>position</code> of an element to relative, it
+          means that any position alterations we make will apply relative to its
+          current position.
+        </p>
+
+        <p>
+          For example,
+          <span style="position: relative; bottom: 10px">this text</span> has
+          its <code>position</code> set to relative, and its
+          <code>bottom</code> position set to 10px, so it shifts up 10 pixels
+          from the bottom relative to its normal position.
+        </p>
+
+        <p>
+          This same thing can be applied to containers (invisible boxes that
+          hold other elements). For example, lets create 2 containers each
+          holding some text.
+        </p>
+
+        <div class="example-containers">
+          <p>hello</p>
+          <p>hello</p>
+        </div>
+
+        <p>
+          Now lets set the <code>position</code> of the container on the right
+          to relative, set its <code>top</code> position to 10 pixels and its
+          <code>right</code> position to 10 pixels.
+        </p>
+
+        <div class="example-containers">
+          <p>hello</p>
+          <p style="top: 10px; right: 10px">hello</p>
+        </div>
+
+        <p>
+          You can see that the container on the right has now been shifted 10
+          pixels from the top, and 10 pixels from the right, relative to its
+          normal position. Note that it also overlaid over the top of the other
+          container, as setting <code>position</code> to relative also brings
+          elements to the front.
+        </p>
+
+        <h3 style="color: rgb(76, 132, 205)">Absolute Position</h3>
+
+        <p>
+          When we set the <code>position</code> of an element to absolute, it
+          means that any position alterations we make will apply relative to its
+          parent element.
+        </p>
+
+        <p>
+          For example, this is what happens if we put some text in a container,
+          set the text <code>position</code> to absolute, and set the
+          <code>left</code>
+          position of the text to 10 pixels.
+        </p>
+
+        <div class="example-containers">
+          <p>
+            <span style="position: absolute; left: 10px">hello</span>
+          </p>
+        </div>
+
+        <p>
+          As you can see, the text sits 10 pixels from the left of its parent
+          container. Note that this only works if the parent container has its
+          <code>position</code> explicitly set. If the parent container does not
+          have its <code>position</code> set to anything, then the element will
+          position itself relative to the lowest level parent container that
+          does have its <code>position</code> set.
+        </p>
+
+        <p>
+          For example, look at that blue text over there on the left.
+          <span style="position: absolute; left: 20px; color: rgb(76, 132, 205)"
+            >Look at me!</span
+          >
+          That text has its <code>position</code> set to absolute, and its
+          <code>left</code> position set to 20 pixels. The lowest level parent
+          container of that text that has its <code>position</code> explicitly
+          set is the body of this whole page, so the text sets its left position
+          relative to that.
+        </p>
+
+        <h3 style="color: rgb(199, 188, 89)">Fixed Position</h3>
+
+        <p>
+          When we set the <code>position</code> of an element to fixed, it means
+          that any position alterations we make will apply relative to the
+          viewport (the screen) displaying the page.
+        </p>
+
+        <p>
+          You may have noticed that yellow text at the bottom right of your
+          screen, stuck in the same position even as you scroll up and down the
+          page. That text has its <code>position</code> set to fixed, its
+          <code>right</code> position set to 20 pixels, and its
+          <code>bottom</code> position set to 20 pixels. I'm sure you get the
+          point. Its fixed there on your screen.
+          <span
+            style="
+              position: fixed;
+              right: 20px;
+              bottom: 20px;
+              color: rgb(199, 188, 89);
+            "
+            >I'm fixed!</span
+          >
+        </p>
+
+        <h3><code>Code: Examples;</code></h3>
+
+        <p>
+          To set the position of any HTML web page element using CSS, we just
+          need to set <code>position</code> to relative, absolute or fixed, and
+          then specify any or all of <code>top, right, bottom, left</code>.
+        </p>
+
+        <p>
+          For example, this CSS code shifts the position of all h3 elements 30
+          pixels from the top and 50 pixels from the left, relative to their
+          normal position.
+        </p>
+
+        <p class="code-block">
+          h3 { <br />
+          position: relative; <br />
+          top: 30px; <br />
+          left: 50px; <br />
+          }
+        </p>
+
+        <p>
+          This CSS code places the element with id "intro-text" at a fixed
+          position 30 pixels from the top and 50 pixels from the left side of
+          the viewport window.
+        </p>
+
+        <p class="code-block">
+          #intro-text { <br />
+          position: fixed; <br />
+          top: 30px; <br />
+          left: 50px; <br />
+          }
+        </p>
+      </article>
+    </div>
+  </body>
+</html>
